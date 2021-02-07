@@ -1,0 +1,588 @@
+/* 
+/ === Table of contents === / 
+01: Main Styles
+02: Navigation 
+03: Page Header 
+04: Social Media Section
+05: About Section 
+06: Videos Section 
+07: Events Section
+08: Contact Section
+09: Back to top-Button
+10: Footer  
+*/
+
+/* === 01: MAIN STYLES === */
+
+body {
+    background: linear-gradient(-110deg, white 33%, rgba(0, 0, 0, 0) 33%), linear-gradient(-110deg, #63e89e 66%, white 66%);
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.06rem;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    display: inline-block;
+    font-size: 1.7rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    font-family: "Azonix", 'Montserrat', sans-serif;
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin: 30px 0 10px 0;
+}
+
+#about, #videos, #events, #contact {
+    padding: 100px 10%;
+}
+
+#videos, #contact {
+    background: rgba(235, 227, 224, 0.5);
+}
+
+input[type="checkbox"], input[type="radio"] {
+    margin-right: 2px;
+}
+
+/* === 01: MAIN STYLES END === */
+
+/* === 02: NAVIGATION === */
+
+nav {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.99);
+    position: fixed;
+    z-index: 1000;
+}
+
+nav ul {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 60px;
+}
+
+nav li {
+    list-style: none;
+    margin: 0 50px;
+}
+
+nav li.active {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(55%, transparent), color-stop(0, #fffc56));
+    background-image: linear-gradient(180deg, transparent 55%, #fffc56 0);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 3px 0;
+}
+
+nav li>a {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(55%, transparent), color-stop(0, #fffc56));
+    background-image: linear-gradient(180deg, transparent 55%, #fffc56 0);
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    -webkit-transition: background-size .4s ease-out;
+    transition: background-size .4s ease-out;
+    padding: 5px 5px;
+}
+
+nav li>a:hover {
+    background-size: 100% 100%;
+}
+
+/* social media icons in responsive nav */
+
+.social-media-responsive {
+    display: none;
+}
+
+/* logo in responsive nav */
+
+.logo {
+    display: none;
+}
+
+/* menu toggle for responsive nav */
+
+.menu-toggle {
+    display: none;
+}
+
+/* === 02: NAVIGATION END === */
+
+/* === 03: PAGE HEADER === */
+
+header {
+    height: 100vh;
+    background: url('../img/coverpic.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+header h1 {
+    width: 43%;
+    position: absolute;
+    bottom: 25%;
+    right: 10%;
+    color: #ff307F;
+    text-align: right;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.45rem;
+    letter-spacing: 0.25rem;
+    background: rgba(255, 255, 255, 0.3);
+    border: solid 50px rgba(255, 255, 255, 0);
+    padding: 0;
+}
+
+/* === 03: PAGE HEADER END == */
+
+/* === 04: SOCIAL MEDIA SECTION === */
+
+#social-media {
+    position: fixed;
+    bottom: 0;
+    left: 50px;
+    font-size: 1.2rem;
+    z-index: 999;
+    background: #ff307F;
+    height: 190px;
+    width: 40px;
+}
+
+#social-media ul li {
+    list-style: none;
+    padding: 10px 8px 0;
+}
+
+#social-media .fab {
+    color: white;
+    -webkit-transition: .25s;
+    transition: .25s;
+}
+
+#social-media .fab:hover {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+    color: #fffc56;
+}
+
+/* === 04: SOCIAL MEDIA SECTION END === */
+
+/* === 05: ABOUT SECTION === */
+
+#about .row {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+#about_text {
+    text-align: left;
+    margin-right: 40px;
+}
+
+#about_text p {
+    padding: 6px 0;
+}
+
+#about_text p:last-of-type {
+    padding: 0 0 6px 0;
+}
+
+#image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    align-content: center;
+}
+
+#image-gallery img {
+    -webkit-transition: 1s;
+    transition: 1s;
+    opacity: 0.8;
+}
+
+#image-gallery img:hover {
+    opacity: 1;
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.img-box {
+    width: 190px;
+    height: 190px;
+    overflow: hidden;
+}
+
+/* === 05: ABOUT SECTION END === */
+
+/* === 06: VIDEOS SECTION === */
+
+#videos iframe {
+    display: block;
+    margin: auto;
+    width: 645px;
+    height: 400px;
+}
+
+/* slideshow videos */
+
+#slideshow {
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+}
+
+#slideshow ul {
+    position: relative;
+    height: 645px;
+    list-style: none;
+    display: -webkit-box;
+    display: flex;
+}
+
+#slideshow ul li {
+    position: relative;
+    width: 645px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+a.next, a.prev {
+    position: absolute;
+    bottom: 45%;
+    z-index: 999;
+    opacity: 0.7;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+a.next {
+    right: 5px;
+}
+
+a.prev {
+    left: 5px;
+}
+
+a.next:hover, a.prev:hover {
+    opacity: 1;
+}
+
+.slider_option {
+    position: relative;
+    margin: 10px;
+    font-size: 0.8em;
+}
+
+/* lyrics accordion */
+
+.accordion {
+    cursor: pointer;
+    background: #fffc56;
+    width: 500px;
+    margin: 5px auto 0 auto;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 5px 15px;
+}
+
+.accordion h3 {
+    display: inline-block;
+}
+
+.panel {
+    background: rgba(255, 255, 255, 0.5);
+    width: 500px;
+    margin: auto;
+    padding: 15px;
+    display: none;
+}
+
+/* === 06: VIDEOS SECTION END === */
+
+/* === 07: EVENTS SECTION === */
+
+.line {
+    width: 80%;
+    margin: auto;
+    border-top: dotted 3px #ff307F;
+    border-bottom: dotted 3px #ff307F;
+    padding: 60px;
+}
+
+/* === 07: EVENTS SECTION END === */
+
+/* === 08: CONTACT SECTION === */
+
+form {
+    width: 650px;
+    background: rgba(255, 255, 255, 0.5);
+    margin: auto;
+    padding: 30px 40px 40px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+form h2 {
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+form p {
+    display: inline;
+}
+
+.required {
+    display: inline;
+    color: red;
+}
+
+.required.text {
+    font-style: italic;
+    float: right;
+}
+
+form span {
+    color: red;
+    margin-top: 5px;
+}
+
+::-webkit-input-placeholder {
+    color: red;
+    opacity: 1;
+    /* Firefox: default = lower opacity  */
+}
+
+::-moz-placeholder {
+    color: red;
+    opacity: 1;
+    /* Firefox: default = lower opacity  */
+}
+
+:-ms-input-placeholder {
+    color: red;
+    opacity: 1;
+    /* Firefox: default = lower opacity  */
+}
+
+::-ms-input-placeholder {
+    color: red;
+    opacity: 1;
+    /* Firefox: default = lower opacity  */
+}
+
+::placeholder {
+    color: red;
+    opacity: 1;
+    /* Firefox: default = lower opacity  */
+}
+
+:-ms-input-placeholder {
+    color: red;
+}
+
+::-ms-input-placeholder {
+    color: red;
+}
+
+.grey::-webkit-input-placeholder {
+    color: grey;
+    opacity: 1;
+    /* Firefox: default = lower opacity  */
+}
+
+.grey::-moz-placeholder {
+    color: grey;
+    opacity: 1;
+    /* Firefox: default = lower opacity  */
+}
+
+.grey:-ms-input-placeholder {
+    color: grey;
+    opacity: 1;
+    /* Firefox: default = lower opacity  */
+}
+
+.grey::-ms-input-placeholder {
+    color: grey;
+    opacity: 1;
+    /* Firefox: default = lower opacity  */
+}
+
+.grey::placeholder {
+    color: grey;
+    opacity: 1;
+    /* Firefox: default = lower opacity  */
+}
+
+.grey:-ms-input-placeholder {
+    color: grey;
+}
+
+.grey::-ms-input-placeholder {
+    color: grey;
+}
+
+form label, form button {
+    margin-top: 30px;
+}
+
+form input, form textarea, form button, #songs {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.06rem;
+    line-height: 1.5;
+    padding: 5px;
+    border: none;
+    outline: none;
+}
+
+form input:focus, form textarea:focus {
+    background: rgba(235, 227, 224, 0.5);
+}
+
+form input {
+    border-bottom: solid 1px black;
+    background: rgba(255, 255, 255, 0);
+}
+
+form textarea {
+    border: solid 1px black;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0);
+    margin-top: 5px;
+}
+
+label[for=awareness], .autograph {
+    margin-top: 20px;
+}
+
+label[for=awareness] {
+    padding-bottom: 5px;
+}
+
+.awareness label {
+    margin-right: 15px;
+}
+
+label[for=other] {
+    margin: 0;
+}
+
+input#other_text, input#autograph_name {
+    margin-left: 5px;
+    width: 30%;
+}
+
+label[for=newsletter] {
+    margin-top: 5px;
+}
+
+form button {
+    width: 150px;
+    border: solid 1px black;
+    padding: 10px 0;
+    letter-spacing: 3px;
+    -webkit-transition: .6s;
+    transition: .6s;
+}
+
+form button:hover {
+    cursor: pointer;
+    background: black;
+    color: white;
+}
+
+.responsive-break {
+    display: none;
+}
+
+/* === 08: CONTACT SECTION END === */
+
+/* === 09: BACK TO TOP-BUTTON === */
+
+#back-to-top {
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    right: 50px;
+    font-size: 1.2rem;
+    background: #ff307F;
+    color: white;
+    height: 190px;
+    width: 40px;
+    padding: 10px 8px 0;
+    display: none;
+}
+
+#back-to-top button {
+    border: none;
+    outline: none;
+    background: #ff307F;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.25rem;
+    white-space: nowrap;
+    cursor: pointer;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    position: absolute;
+    top: 105px;
+    right: -40px;
+    width: 120px;
+}
+
+#back-to-top .fas {
+    font-size: 1.8rem;
+    -webkit-transition: .25s;
+    transition: .25s;
+}
+
+#back-to-top:hover .fas {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+    color: #63e89e;
+}
+
+/* === 09: BACK TO TOP-BUTTON END=== */
+
+/* === 10: FOOTER === */
+
+footer {
+    background: black;
+    color: white;
+    height: 70px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+/* === 09: FOOTER END === */

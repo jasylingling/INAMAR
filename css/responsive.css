@@ -1,0 +1,362 @@
+/* 
+/ === Table of contents === / 
+01: Main Styles
+02: Navigation 
+03: Page Header 
+04: Social Media Section
+05: About Section 
+06: Videos Section 
+07: Events Section
+08: Contact Section
+09: Back to top-Button
+10: Footer  
+*/
+
+/* LARGE DEVICES (laptops/desktops, 1240px and down) */
+
+@media screen and (max-width: 1240px) {
+    /* === 03: PAGE HEADER === */
+    header {
+        background-position-y: 10px;
+    }
+    header h1 {
+        font-size: 1.3rem;
+        letter-spacing: 0.06rem
+    }
+    /* === 03: PAGE HEADER END === */
+    /* === 05: ABOUT SECTION === */
+    #about .row {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+        width: 60%;
+        margin: auto;
+    }
+    #about_text {
+        margin: 0 0 40px;
+    }
+    /* === 05: ABOUT SECTION END === */
+}
+
+/* MEDIUM DEVICES (tablets, 992px and down) */
+
+@media screen and (max-width: 992px) {
+    /* === 01: MAIN STYLES === */
+    #about, #videos, #events, #contact {
+        padding: 100px 5%;
+    }
+    /* === 01: MAIN STYLES END === */
+    /* === 02: NAVIGATION === */
+    .responsive-nav {
+        height: 80px;
+        background: white;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        align-items: center;
+    }
+    #social-media {
+        display: none;
+    }
+    .social-media-responsive {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        background: #ff307F;
+        height: 50%;
+    }
+    .social-media-responsive li {
+        margin: 0 0.7rem;
+    }
+    .social-media-responsive a {
+        background: none;
+        padding: 0;
+    }
+    .social-media-responsive .fab {
+        font-size: 1.3rem;
+        color: white;
+        -webkit-transition: .25s;
+        transition: .25s;
+    }
+    .social-media-responsive .fab:hover {
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+        color: #fffc56;
+    }
+    .logo {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+        margin-top: 5px;
+    }
+    .logo img {
+        height: 40px;
+    }
+    .logo h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+        color: #ff307F;
+        margin: 0;
+    }
+    .menu-toggle {
+        display: block;
+        font-size: 40px;
+        margin: 0 40px;
+        cursor: pointer;
+    }
+    .fa-times {
+        -webkit-animation: fadeInClose .5s;
+        animation: fadeInClose .5s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both
+    }
+    @-webkit-keyframes fadeInClose {
+        from {
+            -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+            opacity: 0
+        }
+        to {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            opacity: 1
+        }
+    }
+    @keyframes fadeInClose {
+        from {
+            -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+            opacity: 0
+        }
+        to {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            opacity: 1
+        }
+    }
+    .fa-bars {
+        -webkit-animation: fadeInBurger .5s;
+        animation: fadeInBurger .5s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both
+    }
+    @-webkit-keyframes fadeInBurger {
+        from {
+            -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+            opacity: 0
+        }
+        to {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            opacity: 1
+        }
+    }
+    @keyframes fadeInBurger {
+        from {
+            -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+            opacity: 0
+        }
+        to {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            opacity: 1
+        }
+    }
+    .nav-links {
+        display: none;
+    }
+    .nav-links.active {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 70vh;
+    }
+    body {
+        overflow-x: hidden;
+    }
+    /* === 02: NAVIGATION END === */
+    /* === 03: PAGE HEADER === */
+    header {
+        background-position-y: 50px;
+        height: 80vh;
+    }
+    header h1 {
+        display: none;
+    }
+    /* === 03: PAGE HEADER END === */
+    /* === 05: ABOUT SECTION === */
+    .img-box {
+        width: 185px;
+        height: 185px;
+    }
+    /* === 05: ABOUT SECTION END === */
+    /* === 06: VIDEOS SECTION === */
+    #videos iframe {
+        width: 585px;
+        height: 340px;
+    }
+    #slideshow ul {
+        height: 340px;
+    }
+    #slideshow ul li {
+        width: 585px;
+        height: 340px;
+    }
+    /* === 06: VIDEOS SECTION END === */
+    /* === 08: CONTACT SECTION === */
+    form {
+        width: 580px;
+    }
+    .responsive-break {
+        display: block;
+    }
+    input#other_text {
+        width: 52%;
+        float: right;
+    }
+    input#autograph_name {
+        width: 100%;
+        float: right;
+    }
+    label[for=newsletter] {
+        margin-top: 20px;
+    }
+    /* === 08: CONTACT SECTION EN === */
+    /* === 09: BACK TO TOP-BUTTON === */
+    #back-to-top button {
+        display: none;
+    }
+    #back-to-top {
+        position: fixed;
+        z-index: 999;
+        bottom: 70px;
+        right: 30px;
+        font-size: 1.2rem;
+        background: #ff307F;
+        color: white;
+        height: auto;
+        width: 53px;
+        padding: 11px 10px;
+    }
+    /* === 09: BACK TO TOP-BUTTON END === */
+}
+
+/* SMALL DEVICES (landscape phones, 768px and down) */
+
+@media screen and (max-width: 768px) {
+    /* === 01: MAIN STYLES === */
+    #about, #videos, #events, #contact {
+        padding: 100px 0;
+    }
+    /* === 01: MAIN STYLES END === */
+    /* === 02: NAVIGATION === */
+    .logo {
+        margin-left: 30px;
+    }
+    .logo img {
+        height: 30px;
+    }
+    .logo h1 {
+        font-size: 0.8rem;
+    }
+    /* === 02: NAVIGATION END === */
+    /* === 05: ABOUT SECTION === */
+    #about .row {
+        width: 80%
+    }
+    #image-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        width: auto;
+        margin: auto;
+    }
+    /* === 05: ABOUT SECTION END === */
+    /* === 06: VIDEOS SECTION === */
+    #videos iframe {
+        width: 450px;
+        height: 275px;
+    }
+    #slideshow ul {
+        height: 275px;
+    }
+    #slideshow ul li {
+        width: 450px;
+        height: 275px;
+    }
+    /* === 06: VIDEOS SECTION END === */
+    /* === 08: CONTACT SECTION === */
+    form {
+        width: 80%;
+        font-size: 0.85rem;
+    }
+    label[for=songs], label[for=awareness], .awareness {
+        display: none;
+    }
+    /* === 08: CONTACT SECTION END === */
+}
+
+/* EXTRA SMALL DEVICES (portrait phones, 576px and down) */
+
+@media screen and (max-width: 576px) {
+    /* === 02: NAVIGATION === */
+    .social-media-responsive li {
+        margin: 0 0.5rem;
+    }
+    .logo img {
+        height: 25px;
+    }
+    .logo h1 {
+        font-size: 0.65rem;
+    }
+    /* === 02: NAVIGATION END === */
+    /* === 05: ABOUT SECTION === */
+    .img-box {
+        width: 170px;
+        height: 170px;
+    }
+    #image-gallery {
+        margin: 0;
+    }
+    /* === 05: ABOUT SECTION END === */
+    /* === 06: VIDEOS SECTION === */
+    #videos iframe {
+        width: 350px;
+        height: 175px;
+    }
+    #slideshow ul {
+        height: 175px;
+    }
+    #slideshow ul li {
+        width: 350px;
+        height: 175px;
+    }
+    .accordion, .panel {
+        width: 90%;
+    }
+    .panel {
+        font-size: 0.9rem;
+    }
+    /* === 06: VIDEOS SECTION END === */
+    /* === 08: CONTACT SECTION === */
+    form {
+        width: 95%;
+        padding: 30px 20px;
+    }
+    /* === 08: CONTACT SECTION END === */
+    /* === 10: FOOTER === */
+    footer {
+        font-size: 0.9rem;
+    }
+    /* === 10: FOOTER END === */
+}
